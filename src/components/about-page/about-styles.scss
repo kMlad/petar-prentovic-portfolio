@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat";
+  color: #fcfcfc;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 185px;
+}
+
+.image-container {
+  padding-left: 225px;
+  padding-top: 95px;
+  margin: 0;
+}
+
+.paragraph-container {
+  padding-left: 225px;
+  padding-top: 95px;
+}
+
+.peki {
+  height: 528px;
+}
+
+.bio-text {
+  text-align: right;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.envelope-svg {
+  position: absolute;
+  bottom: 70px;
+  right: 80px;
+  transition: transform 300ms;
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}

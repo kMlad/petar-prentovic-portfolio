@@ -1,0 +1,40 @@
+.nav-bar-full {
+  //   margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+
+  padding-top: 58px;
+  width: 100%;
+}
+
+.logo-image {
+  padding-left: 72px;
+}
+
+.nav-buttons-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  right: 150px;
+}
+
+.nav-btn {
+  font-family: "Montserrat";
+  padding: 0;
+  margin: 30px 50px;
+  color: #fcfcfc;
+  text-decoration: none;
+  font-weight: regular;
+  font-size: 20px;
+
+  &:hover {
+    color: #aed533;
+  }
+}
+
+.nav-btn-active {
+  color: #aed533;
+  border-bottom: 2px solid #aed533;
+  padding-bottom: 17px;
+  // margin: 14px;
+}

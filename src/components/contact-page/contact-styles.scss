@@ -1,0 +1,79 @@
+.content-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-top: 410px;
+  margin-left: 33%;
+}
+
+.contact-btn {
+  margin-top: 25px;
+  //   padding: 36px 143px;
+
+  width: 526px;
+  height: 131px;
+  margin-bottom: 0px;
+  border: solid 2px #222223;
+  background-color: transparent;
+  color: #222223;
+  font-family: "Montserrat";
+  font-size: 48px;
+  font-weight: bold;
+  margin-left: 60px;
+
+  &:hover {
+    color: #fcfcfc;
+    background-color: #222223;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #1e1e1e;
+  }
+}
+
+.interested-heading {
+  color: #222223;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 42px;
+}
+
+.contact-image-container {
+  margin: 0px;
+  padding-top: 120px;
+}
+
+.bubbles-svg {
+  margin: 0;
+  padding-bottom: -50px;
+}
+
+.linked-in-logo {
+  height: 98px;
+  width: 98px;
+  transition: transform 500ms;
+  padding: 0;
+  margin: 0;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.a-tag {
+  display: inline-block;
+  //   background-color: black;
+  padding: 0;
+  margin: 0;
+  padding-top: 40px;
+
+  max-width: 92px;
+  max-height: 92px;
+}
+
+.linked-in-container {
+  padding: 0;
+  margin: 0;
+  margin-left: 43%;
+}
