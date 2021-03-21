@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/petar-prentovic-portfolio/static/css/main.0f8ab1c0.chunk.css",
+    "main.js": "/petar-prentovic-portfolio/static/js/main.ad34d6bf.chunk.js",
+    "main.js.map": "/petar-prentovic-portfolio/static/js/main.ad34d6bf.chunk.js.map",
+    "runtime-main.js": "/petar-prentovic-portfolio/static/js/runtime-main.665671ad.js",
+    "runtime-main.js.map": "/petar-prentovic-portfolio/static/js/runtime-main.665671ad.js.map",
+    "static/js/2.510abc88.chunk.js": "/petar-prentovic-portfolio/static/js/2.510abc88.chunk.js",
+    "static/js/2.510abc88.chunk.js.map": "/petar-prentovic-portfolio/static/js/2.510abc88.chunk.js.map",
+    "static/js/3.082aa26c.chunk.js": "/petar-prentovic-portfolio/static/js/3.082aa26c.chunk.js",
+    "static/js/3.082aa26c.chunk.js.map": "/petar-prentovic-portfolio/static/js/3.082aa26c.chunk.js.map",
+    "index.html": "/petar-prentovic-portfolio/index.html",
+    "static/css/main.0f8ab1c0.chunk.css.map": "/petar-prentovic-portfolio/static/css/main.0f8ab1c0.chunk.css.map",
+    "static/js/2.510abc88.chunk.js.LICENSE.txt": "/petar-prentovic-portfolio/static/js/2.510abc88.chunk.js.LICENSE.txt",
+    "static/media/cactus.8344149c.png": "/petar-prentovic-portfolio/static/media/cactus.8344149c.png",
+    "static/media/linkedinlogo.f9e4d967.png": "/petar-prentovic-portfolio/static/media/linkedinlogo.f9e4d967.png",
+    "static/media/petareubavodete.30f0d467.png": "/petar-prentovic-portfolio/static/media/petareubavodete.30f0d467.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.665671ad.js",
+    "static/js/2.510abc88.chunk.js",
+    "static/css/main.0f8ab1c0.chunk.css",
+    "static/js/main.ad34d6bf.chunk.js"
+  ]
+}
