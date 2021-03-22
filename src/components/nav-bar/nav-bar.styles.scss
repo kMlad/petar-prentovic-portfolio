@@ -1,40 +1,57 @@
+@import "../../styles/base";
+@import "../../styles/media";
+
 .nav-bar-full {
-  //   margin: 30px auto;
+  width: 100vw;
   display: flex;
   flex-direction: row;
-
-  padding-top: 58px;
-  width: 100%;
-}
-
-.logo-image {
-  padding-left: 72px;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .nav-buttons-container {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  right: 150px;
 }
 
 .nav-btn {
-  font-family: "Montserrat";
-  padding: 0;
-  margin: 30px 50px;
-  color: #fcfcfc;
   text-decoration: none;
-  font-weight: regular;
-  font-size: 20px;
+  color: $white;
 
   &:hover {
-    color: #aed533;
+    color: $green;
   }
 }
 
-.nav-btn-active {
-  color: #aed533;
-  border-bottom: 2px solid #aed533;
-  padding-bottom: 17px;
-  // margin: 14px;
+@include media("<=phone") {
+  .nav-bar-full {
+    height: 90px;
+  }
+
+  .logo-image {
+    height: 39px;
+  }
+
+  .nav-buttons-container {
+  }
+
+  .nav-btn {
+    display: none;
+  }
+}
+
+@include media(">=desktop") {
+  .nav-bar-full {
+    height: 188px;
+    // padding-left: 10vw;
+    // padding-right: 10vw;
+  }
+
+  .nav-buttons-container {
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav-btn {
+    font-size: 1.2rem;
+  }
 }
