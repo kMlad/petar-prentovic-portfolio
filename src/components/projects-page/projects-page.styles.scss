@@ -1,0 +1,37 @@
+@import "../../styles/base";
+@import "../../styles/media";
+
+.projects-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1vh;
+}
+
+@include media("<=phone") {
+  .projects-page-container {
+    padding-bottom: 4vh;
+  }
+  #projects-page-pic-pc {
+    display: none;
+  }
+
+  #projects-page-pic-mobile {
+    margin-top: 2vh;
+  }
+}
+
+@include media(">phone") {
+  .projects-page-container-wrapper {
+    padding-bottom: 4vh;
+  }
+
+  #projects-page-pic-pc {
+    width: 90%;
+  }
+
+  #projects-page-pic-mobile {
+    display: none;
+  }
+}

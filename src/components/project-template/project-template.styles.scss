@@ -1,0 +1,41 @@
+@import "../../styles/base";
+@import "../../styles/media";
+
+.project-template-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@include media("<=phone") {
+  .template-pic-pc {
+    display: none;
+  }
+  .template-pic-medium {
+    display: none;
+  }
+  .template-pic-mobile {
+  }
+}
+
+@include media(">phone", "<=desktop") {
+  .template-pic-pc {
+    display: none;
+  }
+  .template-pic-medium {
+  }
+  .template-pic-mobile {
+    display: none;
+  }
+}
+
+@include media(">desktop") {
+  .template-pic-pc {
+  }
+  .template-pic-medium {
+    display: none;
+  }
+  .template-pic-mobile {
+    display: none;
+  }
+}

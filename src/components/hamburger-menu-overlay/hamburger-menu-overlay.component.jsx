@@ -3,7 +3,7 @@ import "./hamburger-menu-overlay.styles.scss";
 
 import { Link, withRouter, useLocation } from "react-router-dom";
 
-const HamburgerMenuOverlay = ({ hideOverlay }) => {
+const HamburgerMenuOverlay = ({ hideOverlay, handlePopup }) => {
   const location = useLocation();
   console.log(location.pathname);
   return (
@@ -84,6 +84,7 @@ const HamburgerMenuOverlay = ({ hideOverlay }) => {
         />
         <svg
           className="burger-envelope"
+          onClick={handlePopup}
           xmlns="http://www.w3.org/2000/svg"
           width="106"
           height="68"

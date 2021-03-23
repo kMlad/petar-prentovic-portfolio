@@ -20,7 +20,9 @@ const HomePage = (props) => {
           <p className="what-i-like">
             I like to solve problems and create designs
           </p>
-          <button className="home-btn">Let's talk!</button>
+          <button className="home-btn" onClick={props.handlePopup}>
+            Let's talk!
+          </button>
         </div>
         <div className="image-container">
           <img src={CactusPC} alt="kaktufce" className="kaktusce-pc" />

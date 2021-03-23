@@ -1,6 +1,97 @@
 @import "../../styles/base";
 @import "../../styles/media";
 
+.siv-iks {
+  position: absolute;
+  right: 3vw;
+  top: 5vh;
+  cursor: pointer;
+}
+
+.popup-flex-wrapper {
+  display: flex;
+  position: fixed;
+  z-index: 200;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.popup-btn-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -2vw;
+}
+
+.popup-btn {
+  background-color: #f29c3e;
+
+  outline: null;
+  border: solid 1px white;
+  font-weight: 600;
+}
+
+.popup-input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #707070;
+  width: 100%;
+  margin-bottom: 2vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.popup-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 65%;
+  background-color: white;
+  padding-left: 5vw;
+  padding-top: 4vh;
+
+  // margin-top: -8%;
+  padding-bottom: 16vh;
+}
+
+@include media("<=phone") {
+  .popup-container {
+    padding-top: 2vh;
+  }
+
+  .siv-iks {
+    position: absolute;
+    height: 20px;
+    right: 4vw;
+    top: 3vh;
+  }
+
+  .popup-btn {
+    margin-top: 4vh;
+    width: 70%;
+    height: 8vh;
+    font-size: 1.4rem;
+  }
+  .popup-heading {
+    font-size: 2rem;
+  }
+
+  .popup-paragraph {
+    font-size: 0.8rem;
+    width: 60%;
+  }
+}
+
 @include media(">phone") {
   .popup-heading {
     font-size: 4rem;
@@ -9,28 +100,6 @@
   .popup-paragraph {
     font-size: 1.3rem;
     width: 60%;
-  }
-  .popup-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 65%;
-    background-color: white;
-    padding-left: 5vw;
-    padding-top: 4vh;
-    margin: 0 auto;
-    margin-top: -8%;
-    padding-bottom: 16vh;
-  }
-
-  .popup-flex-wrapper {
-    display: flex;
-    position: fixed;
-    z-index: 200;
-
-    height: 100vh;
-    width: 100vw;
   }
 
   .popup-btn-container {
@@ -41,20 +110,6 @@
     margin-left: -2vw;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-  }
-
-  .popup-input {
-    outline: 0;
-    border-width: 0 0 2px;
-    border-color: #707070;
-    width: 100%;
-    margin-bottom: 2vh;
-  }
-
   label {
     font-size: 1.2rem;
   }
@@ -62,7 +117,42 @@
   .popup-btn {
     background-color: #f29c3e;
     margin-top: 2vh;
-    height: 110px;
-    width: 40vh;
+    height: 11vh;
+    width: 40%;
+    outline: null;
+    border: solid 1px white;
+    font-weight: 600;
+    font-size: 2.3rem;
+  }
+}
+
+@include media(">phone", "<=desktop") {
+  .siv-iks {
+    position: absolute;
+    height: 25px;
+    right: 3vw;
+    top: 4vh;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  .popup-container {
+    // margin-top: -14%;
+    padding-bottom: 26vh;
+  }
+
+  .popup-heading {
+    font-size: 3rem;
+  }
+
+  .popup-paragraph {
+    font-size: 1.1rem;
+  }
+
+  .popup-btn {
+    margin-top: 4vh;
+    width: 50%;
   }
 }

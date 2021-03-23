@@ -11,7 +11,9 @@ const NavBar = (props) => {
 
   return (
     <div className="nav-bar-full">
-      <img className="logo-image" src={PPLogo} alt="petar prentovic logo" />
+      <Link exact to="/home">
+        <img className="logo-image" src={PPLogo} alt="petar prentovic logo" />
+      </Link>
       <div className="nav-buttons-container">
         <Link
           exact
@@ -70,7 +72,10 @@ const NavBar = (props) => {
       </div>
       <div className="ham-menu-overlay-container">
         {props.burgerMenuIsOpen === true ? (
-          <HamburgerMenuOverlay hideOverlay={props.handleBurgerMenu} />
+          <HamburgerMenuOverlay
+            hideOverlay={props.handleBurgerMenu}
+            handlePopup={props.handlePopup}
+          />
         ) : (
           <div></div>
         )}

@@ -5,6 +5,8 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import HomePage from "./components/home-page/home-component";
 import AboutPage from "./components/about-page/about-component";
 import ContactPage from "./components/contact-page/contact-component";
+import ProjectsPage from "./components/projects-page/projects-page.component";
+import ProjectTemplate from "./components/project-template/project-template.component";
 import PopUp from "./components/pop-up/pop-up.component";
 
 class App extends React.Component {
@@ -19,9 +21,8 @@ class App extends React.Component {
   }
 
   handlePopup = () => {
-    this.setState((prevState) => ({
-      popupIsOpen: !prevState.popupIsOpen,
-    }));
+    const currentState = this.state.popupIsOpen;
+    this.setState({ popupIsOpen: !currentState });
   };
 
   handleBurgerMenu = () => {
@@ -46,6 +47,11 @@ class App extends React.Component {
           <Switch>
             <Route
               exact
+              path="/project-template"
+              component={ProjectTemplate}
+            ></Route>
+            <Route
+              exact
               path="/about"
               render={(props) => (
                 <AboutPage {...props} handlePopup={this.handlePopup} />
@@ -58,7 +64,7 @@ class App extends React.Component {
                 <HomePage {...props} handlePopup={this.handlePopup} />
               )}
             ></Route>
-            {/* <Route exact path="/projects" component={}></Route> */}
+            <Route exact path="/projects" component={ProjectsPage}></Route>
             <Route
               exact
               path="/contact"
