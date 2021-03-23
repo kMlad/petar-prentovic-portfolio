@@ -3,6 +3,7 @@ import PPLogo from "../../images/pplogo.png";
 import "./nav-bar.styles.scss";
 import Cross from "../../images/cross.png";
 import BurgerMenu from "../../images/burger-menu.png";
+import HamburgerMenuOverlay from "../hamburger-menu-overlay/hamburger-menu-overlay.component";
 import {
   BrowserRouter as Router,
   Switch,
@@ -74,16 +75,25 @@ const NavBar = (props) => {
           onClick={handleBurgerClick()}
           src={Cross}
           alt="iksce"
-          className={`cross ${state.burgerMenuIsClicked ? "" : "no-show"}`}
+          className={`cross nav-btn-mobile ${
+            state.burgerMenuIsClicked ? "" : "no-show"
+          }`}
         />
         <img
           onClick={handleBurgerClick()}
           src={BurgerMenu}
           alt="7ca"
-          className={`burger-menu ${
+          className={`burger-menu nav-btn-mobile ${
             state.burgerMenuIsClicked ? "no-show" : ""
           }`}
         />
+      </div>
+      <div className="ham-menu-overlay-container">
+        {state.burgerMenuIsClicked === true ? (
+          <HamburgerMenuOverlay hideOverlay={handleBurgerClick} />
+        ) : (
+          <div></div>
+        )}
       </div>
     </div>
   );
