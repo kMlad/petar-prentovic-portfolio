@@ -2,10 +2,11 @@
 @import "../../styles/media";
 
 .nav-bar-full {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
-  z-index: -2;
+  z-index: 1;
 }
 
 .no-show {
@@ -26,6 +27,10 @@
   border-bottom: 2px solid $green;
   padding-bottom: 17px;
   margin-top: 17px;
+}
+
+.mobile-images {
+  z-index: 4;
 }
 
 @include media("<=phone") {

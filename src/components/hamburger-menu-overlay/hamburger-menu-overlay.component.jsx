@@ -1,21 +1,14 @@
 import React from "react";
 import "./hamburger-menu-overlay.styles.scss";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  withRouter,
-  useLocation,
-} from "react-router-dom";
+import { Link, withRouter, useLocation } from "react-router-dom";
 
 const HamburgerMenuOverlay = ({ hideOverlay }) => {
   const location = useLocation();
   console.log(location.pathname);
   return (
     <div id="overlay-container-wrapper">
-      <div className="transparent-burger-div" onClick={hideOverlay()}></div>
+      <div className="transparent-burger-div" onClick={hideOverlay}></div>
       <div className="burger-buttons-container">
         <hr
           className={`hr1 ${
@@ -23,7 +16,7 @@ const HamburgerMenuOverlay = ({ hideOverlay }) => {
           }`}
         />
         <Link
-          onClick={hideOverlay()}
+          onClick={hideOverlay}
           exact
           className={`burger-overlay-btn ${
             location.pathname === "/home" ? "burger-overlay-btn-active" : ""
@@ -40,7 +33,7 @@ const HamburgerMenuOverlay = ({ hideOverlay }) => {
           }`}
         />
         <Link
-          onClick={hideOverlay()}
+          onClick={hideOverlay}
           exact
           className={`burger-overlay-btn ${
             location.pathname === "/about" ? "burger-overlay-btn-active" : ""
@@ -57,7 +50,7 @@ const HamburgerMenuOverlay = ({ hideOverlay }) => {
           }`}
         />
         <Link
-          onClick={hideOverlay()}
+          onClick={hideOverlay}
           exact
           className={`burger-overlay-btn ${
             location.pathname === "/projects" ? "burger-overlay-btn-active" : ""
@@ -75,7 +68,7 @@ const HamburgerMenuOverlay = ({ hideOverlay }) => {
           }`}
         />
         <Link
-          onClick={hideOverlay()}
+          onClick={hideOverlay}
           exact
           className={`burger-overlay-btn ${
             location.pathname === "/contact" ? "burger-overlay-btn-active" : ""

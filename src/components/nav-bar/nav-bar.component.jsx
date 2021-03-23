@@ -1,33 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import PPLogo from "../../images/pplogo.png";
 import "./nav-bar.styles.scss";
 import Cross from "../../images/cross.png";
 import BurgerMenu from "../../images/burger-menu.png";
 import HamburgerMenuOverlay from "../hamburger-menu-overlay/hamburger-menu-overlay.component";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  withRouter,
-  useLocation,
-} from "react-router-dom";
+import { Link, withRouter, useLocation } from "react-router-dom";
 
 const NavBar = (props) => {
   const location = useLocation();
-  console.log(location.pathname);
-
-  const [state, setState] = useState({
-    burgerMenuIsClicked: false,
-  });
-
-  const handleBurgerClick = () => {
-    if (state.burgerMenuIsClicked) {
-      return () => setState({ burgerMenuIsClicked: false });
-    } else {
-      return () => setState({ burgerMenuIsClicked: true });
-    }
-  };
 
   return (
     <div className="nav-bar-full">
@@ -72,25 +52,25 @@ const NavBar = (props) => {
       </div>
       <div className="mobile-images">
         <img
-          onClick={handleBurgerClick()}
+          onClick={props.handleBurgerMenu}
           src={Cross}
           alt="iksce"
           className={`cross nav-btn-mobile ${
-            state.burgerMenuIsClicked ? "" : "no-show"
+            props.burgerMenuIsOpen ? "" : "no-show"
           }`}
         />
         <img
-          onClick={handleBurgerClick()}
+          onClick={props.handleBurgerMenu}
           src={BurgerMenu}
           alt="7ca"
           className={`burger-menu nav-btn-mobile ${
-            state.burgerMenuIsClicked ? "no-show" : ""
+            props.burgerMenuIsOpen ? "no-show" : ""
           }`}
         />
       </div>
       <div className="ham-menu-overlay-container">
-        {state.burgerMenuIsClicked === true ? (
-          <HamburgerMenuOverlay hideOverlay={handleBurgerClick} />
+        {props.burgerMenuIsOpen === true ? (
+          <HamburgerMenuOverlay hideOverlay={props.handleBurgerMenu} />
         ) : (
           <div></div>
         )}

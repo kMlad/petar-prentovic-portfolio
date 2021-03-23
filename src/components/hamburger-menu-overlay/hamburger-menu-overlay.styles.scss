@@ -11,7 +11,9 @@
 }
 
 #overlay-container-wrapper {
+  position: relative;
   display: flex;
+  z-index: 3;
 }
 
 .burger-buttons-container {
