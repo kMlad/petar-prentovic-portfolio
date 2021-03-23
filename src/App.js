@@ -50,7 +50,7 @@ class App extends React.Component {
           ) : null}
 
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/petar-prentovic-portfolio/">
               <Redirect to="/home" />
             </Route>
             <Route
