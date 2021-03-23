@@ -1,5 +1,5 @@
 import React from "react";
-import Cactus from "../../images/cactus.png";
+import Cactus from "../../images/cactus-pc.png";
 import "./home-styles.scss";
 
 const HomePage = (props) => {
