@@ -1,7 +1,12 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./components/nav-bar/nav-bar.component";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import {
+  Route,
+  BrowserRouter as Router,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import HomePage from "./components/home-page/home-component";
 import AboutPage from "./components/about-page/about-component";
 import ContactPage from "./components/contact-page/contact-component";
@@ -45,6 +50,9 @@ class App extends React.Component {
           ) : null}
 
           <Switch>
+            <Route exact path="/">
+              <Redirect to="/home" />
+            </Route>
             <Route
               exact
               path="/project-template"
