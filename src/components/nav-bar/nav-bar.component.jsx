@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import PPLogo from "../../images/pplogo.png";
 import "./nav-bar.styles.scss";
+import Cross from "../../images/cross.png";
+import BurgerMenu from "../../images/burger-menu.png";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,6 +15,18 @@ import {
 const NavBar = (props) => {
   const location = useLocation();
   console.log(location.pathname);
+
+  const [state, setState] = useState({
+    burgerMenuIsClicked: false,
+  });
+
+  const handleBurgerClick = () => {
+    if (state.burgerMenuIsClicked) {
+      return () => setState({ burgerMenuIsClicked: false });
+    } else {
+      return () => setState({ burgerMenuIsClicked: true });
+    }
+  };
 
   return (
     <div className="nav-bar-full">
@@ -54,6 +68,22 @@ const NavBar = (props) => {
         >
           Contact
         </Link>
+      </div>
+      <div className="mobile-images">
+        <img
+          onClick={handleBurgerClick()}
+          src={Cross}
+          alt="iksce"
+          className={`cross ${state.burgerMenuIsClicked ? "" : "no-show"}`}
+        />
+        <img
+          onClick={handleBurgerClick()}
+          src={BurgerMenu}
+          alt="7ca"
+          className={`burger-menu ${
+            state.burgerMenuIsClicked ? "no-show" : ""
+          }`}
+        />
       </div>
     </div>
   );
