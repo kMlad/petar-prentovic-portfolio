@@ -1,5 +1,12 @@
 html {
+  height: 100%;
   font-size: 100%;
+  background-image: linear-gradient(to top left, #161618, #313132);
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
