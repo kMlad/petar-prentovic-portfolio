@@ -1,6 +1,15 @@
 @import "../../styles/base";
 @import "../../styles/media";
 
+.transparent-burger-div {
+  position: fixed;
+  height: 100%;
+  width: 50vw;
+  left: 0px;
+  background-color: transparent;
+  top: 0px;
+}
+
 #overlay-container-wrapper {
   display: flex;
 }
@@ -16,7 +25,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-top: 160px;
-  margin-top: -53px;
+  top: 0px;
 }
 
 .burger-envelope {

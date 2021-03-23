@@ -47,14 +47,17 @@
   }
 
   .nav-btn-mobile {
+    position: absolute;
     height: 26px;
     width: 26px;
     cursor: pointer;
     transition: transform 300ms;
     z-index: 2;
+    right: 10vw;
+    top: 5vh;
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.3);
     }
   }
 }

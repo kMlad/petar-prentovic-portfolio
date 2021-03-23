@@ -15,6 +15,7 @@ const HamburgerMenuOverlay = ({ hideOverlay }) => {
   console.log(location.pathname);
   return (
     <div id="overlay-container-wrapper">
+      <div className="transparent-burger-div" onClick={hideOverlay()}></div>
       <div className="burger-buttons-container">
         <hr
           className={`hr1 ${
