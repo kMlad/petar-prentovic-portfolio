@@ -73,12 +73,12 @@
   }
 }
 
-@include media("<phone") {
+@include media("<=phone") {
   .contact-btn {
     margin: 0;
     margin-top: 10vh;
     padding: 0;
-    width: 60vw;
+    width: 70vw;
   }
 
   .interested-heading {

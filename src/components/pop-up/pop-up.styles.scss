@@ -1,8 +1,68 @@
 @import "../../styles/base";
 @import "../../styles/media";
 
-.popup-container {
-  width: 500px;
-  height: 500px;
-  background-color: white;
+@include media(">phone") {
+  .popup-heading {
+    font-size: 4rem;
+  }
+
+  .popup-paragraph {
+    font-size: 1.3rem;
+    width: 60%;
+  }
+  .popup-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 65%;
+    background-color: white;
+    padding-left: 5vw;
+    padding-top: 4vh;
+    margin: 0 auto;
+    margin-top: -8%;
+    padding-bottom: 16vh;
+  }
+
+  .popup-flex-wrapper {
+    display: flex;
+    position: fixed;
+    z-index: 200;
+
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .popup-btn-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -2vw;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+  .popup-input {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #707070;
+    width: 100%;
+    margin-bottom: 2vh;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  .popup-btn {
+    background-color: #f29c3e;
+    margin-top: 2vh;
+    height: 110px;
+    width: 40vh;
+  }
 }

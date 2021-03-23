@@ -5,6 +5,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import HomePage from "./components/home-page/home-component";
 import AboutPage from "./components/about-page/about-component";
 import ContactPage from "./components/contact-page/contact-component";
+import PopUp from "./components/pop-up/pop-up.component";
 
 class App extends React.Component {
   constructor() {
@@ -37,6 +38,10 @@ class App extends React.Component {
             handleBurgerMenu={this.handleBurgerMenu}
             burgerMenuIsOpen={this.state.burgerMenuIsOpen}
           ></NavBar>
+
+          {this.state.popupIsOpen ? (
+            <PopUp handlePopup={this.handlePopup} />
+          ) : null}
 
           <Switch>
             <Route
