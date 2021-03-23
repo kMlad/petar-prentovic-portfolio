@@ -1,6 +1,14 @@
 @import "../../styles/base";
 @import "../../styles/media";
 
+.logo-image {
+  transition: transform 200ms;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 .nav-bar-full {
   position: relative;
   display: flex;
