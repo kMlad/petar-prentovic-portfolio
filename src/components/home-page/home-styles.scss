@@ -1,0 +1,231 @@
+@import "../../styles/base";
+@import "../../styles/media";
+
+.home-btn {
+  //   padding: 36px 143px;
+
+  border: solid 2px #aed533;
+  background-color: transparent;
+  color: #fcfcfc;
+  font-family: "Montserrat";
+  font-weight: bold;
+
+  &:hover {
+    color: #222223;
+    background-color: #aed533;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #93b526;
+  }
+}
+
+.job-title {
+  margin: 0;
+
+  font-weight: 800;
+}
+
+.what-i-like {
+  font-weight: 200;
+}
+
+.hello-heading {
+  font-weight: 200;
+}
+
+.home-page {
+  display: flex;
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.home-page-outer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.introduction-container {
+  * {
+    color: $white;
+  }
+}
+
+@include media("<=phone") {
+  .kaktusce-pc {
+    display: none;
+  }
+
+  .kaktusce-medium {
+    display: none;
+  }
+
+  .home-page-outer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-page {
+    margin-top: 7%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .introduction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hello-heading {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .job-title {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .what-i-like {
+    font-size: 1rem;
+    margin-bottom: 17%;
+  }
+
+  .home-btn {
+    width: 374px;
+    height: 90px;
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+    margin-top: 0;
+  }
+
+  .kaktusce-mobile {
+    width: 100vw;
+  }
+}
+
+@include media(">phone", "<=desktop") {
+  .kaktusce-mobile {
+    display: none;
+  }
+
+  .kaktusce-pc {
+    display: none;
+  }
+
+  .kaktusce-medium {
+    margin-top: -6vh;
+    margin-left: -1vw;
+  }
+
+  .home-page-outer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-page {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .introduction-container {
+    padding-top: 3%;
+    padding-left: 10%;
+  }
+
+  .what-i-like {
+    font-size: 1rem;
+    margin-bottom: 10%;
+  }
+
+  .hello-heading {
+    font-size: 2rem;
+  }
+
+  .job-title {
+    font-size: 4.3rem;
+    padding-top: 2%;
+    padding-bottom: 4%;
+  }
+
+  .home-btn {
+    width: 374px;
+    height: 90px;
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+    margin-top: 0;
+  }
+}
+
+@include media(">desktop") {
+  .home-page-outer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-page {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .kaktusce-mobile {
+    display: none;
+  }
+
+  .kaktusce-medium {
+    display: none;
+  }
+
+  .kaktusce-pc {
+    margin-top: -6vh;
+    margin-left: -5vh;
+  }
+
+  .what-i-like {
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-bottom: 13%;
+  }
+
+  .job-title {
+    font-size: 5.56rem;
+
+    line-height: 5.7rem;
+
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+
+  .introduction-container {
+    padding-top: 4%;
+    padding-left: 10%;
+  }
+
+  .hello-heading {
+    font-size: 1.8rem;
+    font-weight: 200;
+  }
+
+  .home-btn {
+    width: 526px;
+    height: 131px;
+    font-size: 48px;
+    margin-bottom: 0px;
+    margin-top: 0;
+  }
+}
